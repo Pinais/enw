@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbumg654rd7rm"]
+
+[ext_resource type="Script" path="res://EmptyHand.gd" id="1_lyc5j"]
+
+[node name="EmptyHand" type="Node2D"]
+script = ExtResource("1_lyc5j")

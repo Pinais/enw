@@ -1,19 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsyfjx0fvfcnh"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_3275c"]
-[ext_resource type="Texture2D" uid="uid://bjd3e5ynjl3lg" path="res://spritesheet_characters.png" id="2_g0i35"]
-[ext_resource type="PackedScene" uid="uid://cbumg654rd7rm" path="res://empty_hand.tscn" id="3_eh8iu"]
+[ext_resource type="Texture2D" uid="uid://bwbiqu8louc1i" path="res://icon.svg" id="1_v8mfb"]
+[ext_resource type="PackedScene" uid="uid://o2tdoj6fyijd" path="res://food.tscn" id="3_iiwf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x7aa"]
-size = Vector2(32, 44)
+size = Vector2(128, 128)
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_3275c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g0i35")
-region_enabled = true
-region_rect = Rect2(390.157, 0.350964, 32.8367, 42.5661)
+texture = ExtResource("1_v8mfb")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -31,7 +29,6 @@ offset_bottom = 40.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Camera2D/Control"]
 modulate = Color(1, 0, 0, 1)
-layout_mode = 0
 offset_left = -565.0
 offset_top = -315.0
 offset_right = -414.0
@@ -40,7 +37,6 @@ fill_mode = 1
 
 [node name="ProgressBar2" type="ProgressBar" parent="Camera2D/Control"]
 modulate = Color(1, 1, 0, 1)
-layout_mode = 0
 offset_left = -565.0
 offset_top = -282.0
 offset_right = -414.0
@@ -49,11 +45,10 @@ fill_mode = 1
 
 [node name="ProgressBar3" type="ProgressBar" parent="Camera2D/Control"]
 modulate = Color(1, 0, 1, 1)
-layout_mode = 0
 offset_left = -565.0
 offset_top = -254.0
 offset_right = -414.0
 offset_bottom = -227.0
 fill_mode = 1
 
-[node name="EmptyHand" parent="." instance=ExtResource("3_eh8iu")]
+[node name="Food" parent="." instance=ExtResource("3_iiwf4")]
